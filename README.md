@@ -271,3 +271,7 @@ Because the MCP account only has `SELECT` on views (no base tables, no `DDL`/`db
 
 - Oracle SQLcl downloads: https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip
 - Oracle Skills repository: https://github.com/oracle/skills
+
+# mcp-demo
+Research oracle sqlcl mcp and github copilot combined capabilities
+
