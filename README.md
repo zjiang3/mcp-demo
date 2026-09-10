@@ -63,6 +63,11 @@ SQLcl requires a JRE 17 or 21 on your PATH.
 brew install openjdk@17
 ```
 
+**Ubuntu (Linux/WSL):**
+```bash
+sudo apt-get install openjdk-17-jdk
+```
+
 **Verify:**
 ```bash
 java -version
@@ -84,7 +89,7 @@ brew install sqlcl
 brew upgrade sqlcl
 ```
 
-**Manual install (macOS/Linux):**
+**Manual install (macOS/Linux/WSL):**
 ```bash
 curl -O https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip
 unzip sqlcl-latest.zip -d ~/sqlcl
