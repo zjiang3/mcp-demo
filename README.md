@@ -63,6 +63,11 @@ SQLcl requires a JRE 17 or 21 on your PATH.
 brew install openjdk@17
 ```
 
+**Ubuntu (Linux/WSL):**
+```bash
+sudo apt-get install openjdk-17-jdk
+```
+
 **Verify:**
 ```bash
 java -version
@@ -84,7 +89,7 @@ brew install sqlcl
 brew upgrade sqlcl
 ```
 
-**Manual install (macOS/Linux):**
+**Manual install (macOS/Linux/WSL):**
 ```bash
 curl -O https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip
 unzip sqlcl-latest.zip -d ~/sqlcl
@@ -133,6 +138,9 @@ The MCP server cannot accept credentials at runtime — connections must be pre-
 ```bash
 sql /nolog
 ```
+
+> If your `<strong-password>` contains an `&`, run the following sql command first to disable substitutions: `SET DEFINE OFF`
+
 ```sql
 conn -save mydb_ro -savepwd copilot_ro/"<strong-password>"@//hostname:1521/service_name
 ```
@@ -153,6 +161,8 @@ Confirm it saved correctly:
 ```sql
 conn -list
 ```
+
+> In a newer version of sqlcl, use `cm list` to check your saved connection instead.
 
 ---
 
@@ -213,6 +223,8 @@ After saving `mcp.json`, open the **Copilot Chat** panel in VS Code, switch to *
    - Relevant sub-topics for this workflow: `db/sqlcl/` (SQLcl + MCP usage), `db/performance/` (explain plans, tuning), `db/sql-dev/` (query patterns), `db/agent/` (safe read-only workflows).
    - This is a one-time, per-laptop setup — each developer runs it individually.
 4. Restart VS Code (or reload the window) so Copilot re-scans available skills and MCP servers.
+
+> For ease of `skills` usage, try using this oracle `db` [skill](https://www.skills.sh/oracle/skills/db)
 
 ---
 
